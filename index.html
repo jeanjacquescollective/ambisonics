@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AMBISONICS — Sound in Space</title>
+<title>AMBISONICS - Sound in Space</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -12,7 +12,7 @@
 <body>
 
 <nav>
-  <div class="nav-logo">AMBISONIC<span style="color:var(--white)">S</span></div>
+  <div class="nav-logo">AMBISONICS</div>
   <div class="nav-links">
     <a href="#compare">Compare</a>
     <a href="#how">How it works</a>
@@ -30,7 +30,7 @@
     <h1 class="hero-title">AMBI<br><span>SONICS</span></h1>
     <div class="hero-subtitle">Perfect surround. Sound everywhere.</div>
     <p class="hero-desc">
-      Ambisonics is a full-sphere surround sound technique that captures and reproduces the complete three-dimensional soundfield using spherical harmonic decomposition — not just a fixed speaker arrangement.
+      Ambisonics is a full-sphere surround sound technique that captures and reproduces the complete three-dimensional soundfield using spherical harmonic decomposition - not just a fixed speaker arrangement.
     </p>
     <a href="#compare" class="hero-cta">Explore the technology →</a>
   </div>
@@ -44,10 +44,10 @@
 
 <!-- COMPARE -->
 <section id="compare">
-  <div class="section-label">01 — Formats</div>
+  <div class="section-label">01 - Formats</div>
   <h2 class="section-title">3.1 vs 5.1 vs <em>Ambisonics</em></h2>
   <p class="section-body">
-    Traditional surround formats fix a sound image to a specific speaker arrangement. Ambisonics decouples the soundfield from the playback system — encode once, decode to any layout.
+    Traditional surround formats fix a sound image to a specific speaker arrangement. Ambisonics decouples the soundfield from the playback system - encode once, decode to any layout.
   </p>
 
   <div class="compare-grid fade-in">
@@ -120,10 +120,10 @@
 
 <!-- HOW IT WORKS -->
 <section id="how">
-  <div class="section-label">02 — Process</div>
+  <div class="section-label">02 - Process</div>
   <h2 class="section-title">How <em>Ambisonics</em><br>actually works</h2>
   <p class="section-body">
-    Ambisonics samples the soundfield using microphone patterns that correspond to the real-valued spherical harmonics. Instead of routing audio to fixed speakers, you describe the soundfield mathematically — then project it to whatever speakers you have.
+    Ambisonics samples the soundfield using microphone patterns that correspond to the real-valued spherical harmonics. Instead of routing audio to fixed speakers, you describe the soundfield mathematically - then project it to whatever speakers you have.
   </p>
 
   <div class="steps-grid fade-in">
@@ -140,7 +140,7 @@
     <div class="step">
       <div class="step-num">03</div>
       <div class="step-title">Transport</div>
-      <div class="step-body">The B-format signal (or higher-order equivalent) is stored or streamed. Speaker layout is irrelevant at this stage — pure soundfield data.</div>
+      <div class="step-body">The B-format signal (or higher-order equivalent) is stored or streamed. Speaker layout is irrelevant at this stage - pure soundfield data.</div>
     </div>
     <div class="step">
       <div class="step-num">04</div>
@@ -150,7 +150,7 @@
   </div>
 
   <div class="formula-block fade-in">
-    <div class="formula-label">First-order ambisonics — encoding equations</div>
+    <div class="formula-label">First-order ambisonics - encoding equations</div>
     <pre>
 <span class="hl">W</span> = S <span class="dim">×</span> 0.707                             <span class="dim">// omnidirectional (pressure)</span>
 <span class="hl">X</span> = S <span class="dim">×</span> cos(<span class="hl">azimuth</span>) <span class="dim">×</span> cos(<span class="hl">elevation</span>)   <span class="dim">// front-back axis</span>
@@ -172,13 +172,13 @@
 
 <hr class="divider">
 
-<!-- SPHERICAL HARMONICS — THREE.JS -->
+<!-- SPHERICAL HARMONICS - THREE.JS -->
 <div class="threejs-section" id="spherical">
   <div class="threejs-inner">
-    <div class="section-label">03 — Mathematics</div>
+    <div class="section-label">03 - Mathematics</div>
     <h2 class="section-title">Spherical<br><em>Harmonics</em></h2>
     <p class="section-body">
-      Spherical harmonics are the mathematical building blocks of Ambisonics. Each order adds more directional detail — like increasing the resolution of a spatial audio image. Rotate the visualization to explore their 3D shapes.
+      Spherical harmonics are the mathematical building blocks of Ambisonics. Each order adds more directional detail - like increasing the resolution of a spatial audio image. Rotate the visualization to explore their 3D shapes.
     </p>
 
     <div class="threejs-layout">
@@ -210,8 +210,8 @@
         </div>
 
         <div class="sh-info-panel" id="shInfo">
-          <h4 id="shTitle">Y(0,0) — Omnidirectional</h4>
-          <p id="shDesc">The zeroth-order harmonic is a perfect sphere — it responds equally to sound from all directions. This is the W channel in B-format ambisonics.</p>
+          <h4 id="shTitle">Y(0,0) - Omnidirectional</h4>
+          <p id="shDesc">The zeroth-order harmonic is a perfect sphere - it responds equally to sound from all directions. This is the W channel in B-format ambisonics.</p>
           <div class="sh-legend">
             <div class="sh-legend-item">
               <div class="sh-legend-dot" style="background:#00f5d4;"></div>
@@ -239,7 +239,7 @@
         </div>
 
         <div class="order-card" style="margin-top:8px;">
-          <div class="order-card-title">Current: <span id="currentLabel">Order 0 — Mono</span></div>
+          <div class="order-card-title">Current: <span id="currentLabel">Order 0 - Mono</span></div>
           <div id="channelCount" class="order-card-channels">1</div>
           <div class="order-card-sub">channels = (order+1)²</div>
           <div class="order-card-body" id="orderDesc">First-order ambisonics uses 4 channels to describe the full soundfield in three dimensions.</div>
@@ -253,7 +253,7 @@
 
 <!-- ORDERS -->
 <section id="orders">
-  <div class="section-label">04 — Resolution</div>
+  <div class="section-label">04 - Resolution</div>
   <h2 class="section-title">Higher <em>orders</em>,<br>higher resolution</h2>
   <p class="section-body">
     Each increase in order adds more spherical harmonic components, improving the angular resolution of the soundfield representation. Higher orders require more channels but give a larger "sweet spot" and sharper imaging.
@@ -264,14 +264,14 @@
       <div class="order-card-num">0</div>
       <div class="order-card-title">Zeroth Order</div>
       <div class="order-card-channels">1</div>
-      <div class="order-card-sub">channel — Mono</div>
+      <div class="order-card-sub">channel - Mono</div>
       <div class="order-card-body">Just W: omnidirectional pressure. No spatial information. Starting point of the hierarchy.</div>
     </div>
     <div class="order-card" style="border-color:rgba(0,245,212,0.3)">
       <div class="order-card-num">1</div>
-      <div class="order-card-title">First Order — B-Format</div>
+      <div class="order-card-title">First Order - B-Format</div>
       <div class="order-card-channels" style="color:var(--cyan)">4</div>
-      <div class="order-card-sub">channels — W, X, Y, Z</div>
+      <div class="order-card-sub">channels - W, X, Y, Z</div>
       <div class="order-card-body">Classic B-format. Full-sphere capture with figure-8 patterns. Practical for VR and broadcast.</div>
     </div>
     <div class="order-card">
@@ -313,7 +313,7 @@
       <div class="order-card-num">7</div>
       <div class="order-card-title">Seventh Order</div>
       <div class="order-card-channels" style="color:var(--magenta)">64</div>
-      <div class="order-card-sub">channels — practical limit</div>
+      <div class="order-card-sub">channels - practical limit</div>
       <div class="order-card-body">Current practical ceiling for real-time HOA. Sub-5° localization accuracy. Requires dense speaker arrays.</div>
     </div>
   </div>
@@ -339,7 +339,7 @@ Order 7: (7+1)² = <span class="hl">64</span>  channels  <span class="dim">← p
 
 <footer>
   <div class="footer-left">
-    <strong>AMBISONICS</strong> — Interactive explainer<br>
+    <strong>AMBISONICS</strong> - Interactive explainer<br>
     Based on CCRMA Music 222 · Fernando Lopez-Lezcano · Stanford 2021
   </div>
   <div class="footer-right">
