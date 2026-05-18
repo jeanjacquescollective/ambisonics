@@ -429,26 +429,52 @@
     width: 10px; height: 10px; border-radius: 50%;
   }
   .sh-harmonics-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2px;
-    background: var(--border);
-    margin-top: 8px;
-    max-height: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    max-height: 280px;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--cyan) var(--bg2);
   }
+  .sh-order-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .sh-order-label {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    font-weight: 700;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(0, 245, 212, 0.2);
+  }
+  .sh-order-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+  .sh-harmonics-hint {
+    font-size: 11px;
+    color: rgba(240,240,240,0.5);
+    margin-top: 6px;
+    font-style: italic;
+    line-height: 1.5;
+  }
   .sh-harmonic-btn {
     background: var(--bg);
-    border: none;
+    border: 1px solid var(--border);
     color: var(--gray);
-    padding: 8px 4px;
+    padding: 10px 8px;
     font-family: var(--font-mono);
     font-size: 10px;
     cursor: pointer;
     transition: all 0.2s;
     text-align: center;
+    border-radius: 3px;
   }
   .sh-harmonic-btn:hover, .sh-harmonic-btn.active {
     background: rgba(0,245,212,0.1);
